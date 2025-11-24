@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Users, Rocket, Target, Mail } from "lucide-react";
+import { Users, Rocket, Target, Mail, Briefcase } from "lucide-react";
 
 // Placeholder job openings
 const jobOpenings = [
@@ -78,8 +78,57 @@ const CareersPage = () => {
           ))}
         </div>
 
-        {/* Open Positions */}
+        {/* Open Positions - NO OPENINGS STATE */}
         <div className="mb-16">
+          <h2
+            className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center animate-slide-up"
+            style={{ animationDelay: "0.3s" }}
+          >
+            Open <span className="gradient-text">Positions</span>
+          </h2>
+
+          <div
+            className="flex justify-center animate-slide-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <Card className="glass-card p-10 max-w-2xl w-full text-center">
+              <div className="mb-6 inline-flex p-4 rounded-full bg-muted/50">
+                <Briefcase className="h-10 w-10 text-muted-foreground" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-2">
+                No Current Openings
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                We don't have any open roles at the moment, but things change
+                fast here! Check back soon.
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* General Inquiry */}
+        {/* <div
+          className="text-center animate-slide-up"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <h3 className="text-2xl font-heading font-semibold mb-4">
+            Want to be considered for future roles?
+          </h3>
+          <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+            We're always looking for talented people. Send your resume to us and
+            we'll keep it on file.
+          </p>
+          <Button asChild size="lg" variant="outline" className="border-2">
+            <a href="mailto:info@tenderlink.tech?subject=General Career Inquiry">
+              <Mail className="h-4 w-4 mr-2" />
+              Email Your Resume
+            </a>
+          </Button>
+        </div> */}
+
+        {/* ------------------------------------------------------------------ */}
+        {/* Open Positions */}
+        {/* <div className="mb-16">
           <h2
             className="text-3xl md:text-4xl font-heading font-bold mb-8 text-center animate-slide-up"
             style={{ animationDelay: "0.3s" }}
@@ -105,10 +154,10 @@ const CareersPage = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* No suitable position? */}
-        <div
+        {/* <div
           className="text-center animate-slide-up"
           style={{ animationDelay: "0.8s" }}
         >
@@ -125,7 +174,7 @@ const CareersPage = () => {
               Email Your Resume
             </a>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

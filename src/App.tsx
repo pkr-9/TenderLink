@@ -8,17 +8,13 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { InnerPageLayout } from "./components/InnerPageLayout";
 import AboutUsPage from "./pages/AboutUsPage";
-import ServicesPage from "./pages/ServicesPage";
-import TenderSearchPage from "./pages/services/TenderSearchPage";
-import BidSupportPage from "./pages/services/BidSupportPage";
-import GeMRegistrationPage from "./pages/services/GeMRegistrationPage";
-import MSMECertificationPage from "./pages/services/MSMECertificationPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import CareersPage from "./pages/CareersPage";
 import PressKitPage from "./pages/PressKitPage";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
 
@@ -28,29 +24,12 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <FloatingWhatsApp />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route element={<InnerPageLayout />}>
               <Route path="/about" element={<AboutUsPage />} />
-              {/* Add more pages here later, e.t. */}
-              <Route path="/services" element={<ServicesPage />} />
-              <Route
-                path="/services/tender-search"
-                element={<TenderSearchPage />}
-              />
-              <Route
-                path="/services/bid-support"
-                element={<BidSupportPage />}
-              />
-              <Route
-                path="/services/gem-registration"
-                element={<GeMRegistrationPage />}
-              />
-              <Route
-                path="/services/msme-certification"
-                element={<MSMECertificationPage />}
-              />
               <Route path="/blog" element={<BlogListPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

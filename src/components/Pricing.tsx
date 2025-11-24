@@ -63,7 +63,8 @@ export const Pricing = () => {
             Simple, <span className="gradient-text">Transparent Pricing</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect plan for your business. All plans include a 14-day free trial.
+            Choose the perfect plan for your business. All plans include a
+            14-day free trial.
           </p>
         </div>
 
@@ -83,13 +84,23 @@ export const Pricing = () => {
                   Most Popular
                 </div>
               )}
-              
+
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-heading font-bold mb-2">{plan.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{plan.description}</p>
+                <h3 className="text-2xl font-heading font-bold mb-2">
+                  {plan.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {plan.description}
+                </p>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-4xl font-bold gradient-text">{plan.price}</span>
-                  {plan.period && <span className="text-muted-foreground">/{plan.period}</span>}
+                  <span className="text-4xl font-bold gradient-text">
+                    {plan.price}
+                  </span>
+                  {plan.period && (
+                    <span className="text-muted-foreground">
+                      /{plan.period}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -103,6 +114,7 @@ export const Pricing = () => {
               </ul>
 
               <Button
+                asChild
                 className={`w-full ${
                   plan.popular
                     ? "bg-gradient-primary hover:opacity-90 shadow-glow"
@@ -111,7 +123,7 @@ export const Pricing = () => {
                 variant={plan.popular ? "default" : "outline"}
                 size="lg"
               >
-                {plan.cta}
+                <a href="#contact">{plan.cta}</a>
               </Button>
             </Card>
           ))}

@@ -18,12 +18,12 @@ export const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "/#features-services" },
+    { name: "Market Gap", href: "/#market-gap" },
     { name: "How It Works", href: "/#how-it-works" },
     { name: "Pricing", href: "/#pricing" },
     { name: "Contact", href: "/#contact" },
     { name: "Careers", href: "/careers" },
-    { name: "Press Kit", href: "/press-kit" },
   ];
 
   return (
@@ -71,8 +71,12 @@ export const Header = () => {
               )}
             </Button>
 
-            <Button className="hidden md:inline-flex bg-gradient-primary hover:opacity-90 transition-opacity">
-              Get Started
+            {/* Desktop Get Started Button */}
+            <Button
+              asChild
+              className="hidden md:inline-flex bg-gradient-primary hover:opacity-90 transition-opacity"
+            >
+              <a href="/#contact">Get Started</a>
             </Button>
 
             {/* Mobile Menu Button */}
