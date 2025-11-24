@@ -32,7 +32,7 @@ export const Header = () => {
         isScrolled ? "glass-card shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">

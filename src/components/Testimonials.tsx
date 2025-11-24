@@ -48,14 +48,15 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 overflow-hidden">
+    <section className="px-6 py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of satisfied businesses winning tenders with TenderLink
+            Join thousands of satisfied businesses winning tenders with
+            TenderLink
           </p>
         </div>
 
@@ -68,15 +69,22 @@ export const Testimonials = () => {
             >
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  <Star
+                    key={i}
+                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                  />
                 ))}
               </div>
-              <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+              <p className="text-muted-foreground mb-4 italic">
+                "{testimonial.text}"
+              </p>
               <div className="flex items-center gap-3">
                 <div className="text-3xl">{testimonial.image}</div>
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.company}
+                  </div>
                 </div>
               </div>
             </Card>
