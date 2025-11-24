@@ -35,7 +35,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-6 animate-slide-up">
             <div className="inline-block">
               <span className="px-4 py-2 rounded-full glass-card text-sm font-medium">
                 🎯 India's Leading Tender Platform
@@ -55,12 +55,12 @@ export const Hero = () => {
 
             {/* Static Contact / Get Started Box */}
             <div className="inline-block w-full max-w-xl">
-              <Card className="glass-card p-5 border-l-4 border-l-primary relative overflow-hidden group">
+              <Card className="glass-card p-4 border-l-4 border-l-primary relative overflow-hidden group">
                 {/* Subtle hover effect background */}
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
 
                 <div className="relative z-10">
-                  <h3 className="text-xl font-heading font-bold mb-4 flex items-center gap-2">
+                  <h3 className="text-xl font-heading font-bold mb-2 flex items-center gap-1">
                     Get Started Free
                   </h3>
 
