@@ -14,7 +14,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import CareersPage from "./pages/CareersPage";
 import PressKitPage from "./pages/PressKitPage";
-import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { FloatingIcons } from "@/components/FloatingIcons";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +24,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <FloatingWhatsApp />
+        <FloatingIcons />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />

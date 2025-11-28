@@ -97,7 +97,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-slide-up">
+          <div className="md:hidden bg-gradient-primary py-4 border-t border-border animate-slide-up">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
