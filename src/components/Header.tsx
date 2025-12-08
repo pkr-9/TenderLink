@@ -36,7 +36,8 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow">
+            {/* <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow"> */}
+            <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center shadow-glow">
               <span className="text-white font-bold text-xl">TL</span>
             </div>
             <span className="font-heading font-bold text-xl">TenderLink</span>
@@ -74,7 +75,8 @@ export const Header = () => {
             {/* Desktop Get Started Button */}
             <Button
               asChild
-              className="hidden md:inline-flex bg-gradient-primary hover:opacity-90 transition-opacity"
+              // className="hidden md:inline-flex bg-gradient-primary hover:opacity-90 transition-opacity"
+              className="hidden md:inline-flex bg-blue-500 hover:opacity-90 transition-opacity"
             >
               <a href="/#contact">Get Started</a>
             </Button>

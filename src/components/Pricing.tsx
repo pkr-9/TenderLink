@@ -1,54 +1,56 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, X } from "lucide-react";
 
 export const Pricing = () => {
   const plans = [
     {
-      name: "Starter",
-      price: "₹999",
-      period: "month",
-      description: "Perfect for small businesses starting out",
+      name: "Gold",
+      price: "₹51,000",
+      period: "subscription",
+      description: "Essential tender coverage for growing businesses.",
       features: [
-        "100 Tender alerts per month",
-        "Basic AI matching",
-        "Email notifications",
-        "Community support",
-        "Standard documentation help",
+        { name: "Website Access", included: true },
+        { name: "WhatsApp Alerts", included: true },
+        { name: "Call Support", included: true },
+        { name: "Mobile App Access", included: false },
+        { name: "Call Alerts", included: false },
+        { name: "Collaboration", included: false },
+        { name: "11x Bidding Assistance", included: false },
       ],
-      cta: "Start Free Trial",
+      cta: "Contact Sales",
       popular: false,
     },
     {
-      name: "Professional",
-      price: "₹2,999",
-      period: "month",
-      description: "For growing businesses serious about winning",
+      name: "Platinum",
+      price: "₹79,000",
+      period: "subscription",
+      description: "Priority support and enhanced visibility.",
       features: [
-        "Unlimited tender alerts",
-        "Advanced AI matching",
-        "Email, SMS & App notifications",
-        "Priority support",
-        "Complete bid support",
-        "GeM & MSME registration help",
-        "Tender analytics dashboard",
+        { name: "Website Access", included: true },
+        { name: "WhatsApp Alerts", included: true },
+        { name: "Call Support", included: true },
+        { name: "Mobile App Access", included: true },
+        { name: "Call Alerts", included: true },
+        { name: "Collaboration", included: true },
+        { name: "11x Bidding Assistance", included: false },
       ],
-      cta: "Get Started",
+      cta: "Contact Sales",
       popular: true,
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations",
+      name: "Diamond",
+      price: "₹1,10,000",
+      period: "subscription",
+      description: "Ultimate coverage for large-scale operations.",
       features: [
-        "Everything in Professional",
-        "Dedicated account manager",
-        "Custom integrations",
-        "Team collaboration tools",
-        "Advanced analytics & reporting",
-        "API access",
-        "White-label options",
+        { name: "Website Access", included: true },
+        { name: "WhatsApp Alerts", included: true },
+        { name: "Call Support", included: true },
+        { name: "Mobile App Access", included: true },
+        { name: "Call Alerts", included: true },
+        { name: "Collaboration", included: true },
+        { name: "11x Bidding Assistance", included: true },
       ],
       cta: "Contact Sales",
       popular: false,
@@ -60,11 +62,11 @@ export const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-            Simple, <span className="gradient-text">Transparent Pricing</span>
+            Premium <span className="gradient-text">Subscription Plans</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect plan for your business. All plans include a
-            14-day free trial.
+            Choose a plan that fits your business scale. Unlock 11x Bidding
+            Assistance and real-time alerts.
           </p>
         </div>
 
@@ -81,7 +83,7 @@ export const Pricing = () => {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-primary text-white text-sm font-semibold rounded-full shadow-lg">
-                  Most Popular
+                  Best Value
                 </div>
               )}
 
@@ -93,22 +95,33 @@ export const Pricing = () => {
                   {plan.description}
                 </p>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-4xl font-bold gradient-text">
+                  <span className="text-3xl font-bold gradient-text">
                     {plan.price}
                   </span>
-                  {plan.period && (
-                    <span className="text-muted-foreground">
-                      /{plan.period}
-                    </span>
-                  )}
                 </div>
               </div>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-teal flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
+                  <li key={i} className="flex items-center gap-3">
+                    {feature.included ? (
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full border border-teal-500 flex items-center justify-center text-teal-500">
+                        <Check className="h-4 w-4" />
+                      </div>
+                    ) : (
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full border border-red-500 flex items-center justify-center text-red-500">
+                        <X className="h-4 w-4" />
+                      </div>
+                    )}
+                    <span
+                      className={`text-sm ${
+                        feature.included
+                          ? "text-foreground font-medium"
+                          : "text-muted-foreground"
+                      }`}
+                    >
+                      {feature.name}
+                    </span>
                   </li>
                 ))}
               </ul>

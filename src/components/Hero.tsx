@@ -77,7 +77,7 @@ export const Hero = () => {
                           Call for Access
                         </span>
                         <span className="font-bold text-foreground text-lg">
-                          +91-77749-11330
+                          +91-7774 911330
                         </span>
                       </div>
                     </a>
@@ -96,7 +96,7 @@ export const Hero = () => {
                           Email Inquiry
                         </span>
                         <span className="font-bold text-foreground text-lg">
-                          info@tenderlink.tech
+                          Contact@tenderinfo.in
                         </span>
                       </div>
                     </a>

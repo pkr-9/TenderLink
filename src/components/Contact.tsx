@@ -81,8 +81,8 @@ export const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have questions? We're here to help you succeed. Visit our HQ or send
-            us a message.
+            Have questions? We're here to help you succeed. Visit our offices or
+            send us a message.
           </p>
         </div>
 
@@ -100,10 +100,10 @@ export const Contact = () => {
                     Email Us
                   </h3>
                   <a
-                    href="mailto:info@tenderlink.tech"
+                    href="mailto:Contact@tenderinfo.in"
                     className="text-foreground font-medium hover:text-primary transition-colors"
                   >
-                    info@tenderlink.tech
+                    Contact@tenderinfo.in
                   </a>
                 </div>
               </Card>
@@ -120,32 +120,42 @@ export const Contact = () => {
                     href="tel:+917774911330"
                     className="text-foreground font-medium hover:text-primary transition-colors"
                   >
-                    +91-77749-11330
+                    +91-7774 911330
                   </a>
                 </div>
               </Card>
             </div>
 
-            {/* Expanded Address Card with Map */}
-            <Card className="glass-card overflow-hidden h-48 flex flex-col">
-              <div className="p-6 pb-4">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                    <MapPin className="h-6 w-6" />
+            {/* Address Card */}
+            <Card className="glass-card p-6 flex-grow flex flex-col justify-center">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-heading font-semibold text-lg mb-2">
+                    Pune Head Office
+                  </h3>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <p>Baner, Pune</p>
+                    <p>Maharashtra - 411045</p>
                   </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-lg mb-1">
-                      Headquarters
-                    </h3>
-                    <div className="space-y-1 text-sm text-muted-foreground">
-                      <p className="font-medium text-foreground">
-                        Ashwamedh Motors Pvt. Ltd.
-                      </p>
-                      <p>Office No. 804, 8th Floor</p>
-                      <p>Maruti Millennium Tower</p>
-                      <p>Baner, Pune</p>
-                      <p>Maharashtra - 411045</p>
-                    </div>
+                </div>
+              </div>
+
+              <div className="w-full h-px bg-border/50 mb-6" />
+
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                  <Building2 className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-heading font-semibold text-lg mb-2">
+                    Delhi Office
+                  </h3>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <p>Saket, New Delhi</p>
+                    <p>Delhi - 110030</p>
                   </div>
                 </div>
               </div>

@@ -14,11 +14,10 @@ export const Footer = () => {
       { name: "GeM Registration", href: "/services/gem-registration" },
       { name: "MSME Certification", href: "/services/msme-certification" },
     ],
-    Support: [
-      { name: "Help Center", href: "#" },
-      { name: "Contact Us", href: "#contact" },
-      { name: "FAQs", href: "#" },
-      { name: "API Docs", href: "#" },
+    Contact: [
+      { name: "Contact@tenderinfo.in", href: "mailto:Contact@tenderinfo.in" },
+      { name: "+91-7774 911330", href: "tel:+917774911330" },
+      { name: "Pune | Delhi", href: "#contact" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy-policy" },
@@ -90,9 +89,6 @@ export const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} TenderLink. All rights reserved.
           </p>
-          {/* <p className="text-sm text-muted-foreground">
-            Made with ❤️ in India
-          </p> */}
         </div>
       </div>
     </footer>
