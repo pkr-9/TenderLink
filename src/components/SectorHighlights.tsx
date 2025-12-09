@@ -17,6 +17,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"; // Import Autoplay plugin
 
 export const SectorHighlights = () => {
   const sectors = [
@@ -80,6 +81,13 @@ export const SectorHighlights = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false, // Continue sliding after user interacts
+                stopOnMouseEnter: true, // Pause when user hovers (good UX)
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent>

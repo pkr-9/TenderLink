@@ -13,7 +13,12 @@ import BlogPostPage from "./pages/BlogPostPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import CareersPage from "./pages/CareersPage";
-import PressKitPage from "./pages/PressKitPage";
+import ServicesPage from "./pages/ServicesPage";
+import ServiceDetailsPage from "./pages/ServiceDetailsPage";
+import MarketGapPage from "./pages/MarketGapPage"; // <--- Import
+import HowItWorksPage from "./pages/HowItWorksPage"; // <--- Import
+import PricingPage from "./pages/PricingPage"; // <--- Import
+import ContactPage from "./pages/ContactPage";
 import { FloatingIcons } from "@/components/FloatingIcons";
 
 const queryClient = new QueryClient();
@@ -37,9 +42,13 @@ const App = () => (
                 path="/terms-of-service"
                 element={<TermsOfServicePage />}
               />
+              <Route path="/services/:slug" element={<ServiceDetailsPage />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/careers" element={<CareersPage />} />
-              <Route path="/press-kit" element={<PressKitPage />} />
-              {/* --------------------------- */}
+              <Route path="/market-gap" element={<MarketGapPage />} />
+              <Route path="/how-it-works" element={<HowItWorksPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/contact" element={<ContactPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -91,6 +91,7 @@ export const Contact = () => {
           <div className="space-y-6 flex flex-col">
             {/* Quick Contact Cards */}
             <div className="grid gap-6">
+              {/* Email card  */}
               <Card className="glass-card p-5 hover:shadow-glow transition-all duration-300 flex items-center gap-4">
                 <div className="p-3 rounded-lg bg-blue/10 text-blue">
                   <Mail className="h-6 w-6" />
@@ -107,7 +108,7 @@ export const Contact = () => {
                   </a>
                 </div>
               </Card>
-
+              {/* Phone card  */}
               <Card className="glass-card p-5 hover:shadow-glow transition-all duration-300 flex items-center gap-4">
                 <div className="p-3 rounded-lg bg-teal/10 text-teal">
                   <Phone className="h-6 w-6" />

@@ -18,11 +18,11 @@ export const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/#features-services" },
-    { name: "Market Gap", href: "/#market-gap" },
-    { name: "How It Works", href: "/#how-it-works" },
-    { name: "Pricing", href: "/#pricing" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Services", href: "/services" },
+    { name: "Market Gap", href: "/market-gap" },
+    { name: "How It Works", href: "/how-it-works" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
     { name: "Careers", href: "/careers" },
   ];
 
@@ -35,13 +35,41 @@ export const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
-            {/* <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow"> */}
-            <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center shadow-glow">
-              <span className="text-white font-bold text-xl">TL</span>
+          <a href="/#home" className="flex items-center space-x-3 group">
+            {/* Image Logo from public folder */}
+            <div className="relative w-12 h-12 rounded-2xl overflow-hidden shadow-lg transition-transform group-hover:scale-105">
+              <img
+                src="/logo.png"
+                alt="TenderLink Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <span className="font-heading font-bold text-xl">TenderLink</span>
+
+            {/* Brand Text */}
+            <span className="font-heading font-bold text-xl text-foreground group-hover:text-primary transition-colors">
+              TenderLink
+            </span>
           </a>
+          {/* <a href="/#home" className="flex items-center space-x-3 group">
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-105"
+              style={{ backgroundColor: "hsl(242 54.6% 28%)" }}
+            >
+              <span
+                className="text-white font-serif text-3xl tracking-widest relative top-[1px]"
+                style={{
+                  fontFamily: "serif",
+                  textShadow: "2px 2px 0px #000000, -1px -1px 0 #000000",
+                }}
+              >
+                TL
+              </span>
+            </div>
+
+            <span className="font-heading font-bold text-2xl text-foreground group-hover:text-primary transition-colors">
+              TenderLink
+            </span>
+          </a> */}
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -75,8 +103,7 @@ export const Header = () => {
             {/* Desktop Get Started Button */}
             <Button
               asChild
-              // className="hidden md:inline-flex bg-gradient-primary hover:opacity-90 transition-opacity"
-              className="hidden md:inline-flex bg-blue-500 hover:opacity-90 transition-opacity"
+              className="hidden md:inline-flex bg-gradient-primary hover:opacity-90 transition-opacity"
             >
               <a href="/#contact">Get Started</a>
             </Button>
